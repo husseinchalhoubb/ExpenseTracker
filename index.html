@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Expense Tracker</title>
+    <style>
+      body {
+        background-color: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col items-center justify-center py-20">
+    <h1 class="font-bold text-3xl">Expense Tracker</h1>
+
+    <div class="flex flex-col space-y-8 mt-10 lg:w-1/4">
+      <div>
+        <p>Your Balance:</p>
+        <strong id="balance">$0.00</strong>
+      </div>
+
+      <div
+        class="flex items-center justify-between p-5 shadow-md bg-white w-3/4 mx-auto text-center divide-x-2"
+      >
+        <div>
+          <p>Income:</p>
+          <strong id="income" class="text-green-500">$0.00</strong>
+        </div>
+
+        <div class="pl-12">
+          <p>Expense:</p>
+          <strong id="expense" class="text-red-500">$0.00</strong>
+        </div>
+      </div>
+
+      <div>
+        <p class="font-semibold">History:</p>
+        <hr />
+
+        <ul id="history" class="mt-2 space-y-2"></ul>
+      </div>
+
+      <div>
+        <p class="font-semibold">Add New Transaction:</p>
+        <hr />
+      </div>
+
+      <form>
+        <div class="flex flex-col">
+          <label for="transaction">Transaction</label>
+          <input
+            type="text"
+            placeholder="Enter your transaction"
+            id="transaction"
+            class="mt-2 pl-2 py-1 border"
+          />
+        </div>
+
+        <div class="flex flex-col mt-7">
+          <label for="amount"
+            >Amount: (Positive -> Income, Negative -> Expense)</label
+          >
+          <input
+            type="number"
+            placeholder="Enter your amount"
+            id="amount"
+            class="mt-2 pl-2 py-1 border"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="mt-3 bg-indigo-400 text-white w-full py-2 active:scale-95 transition-all duration-150"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
